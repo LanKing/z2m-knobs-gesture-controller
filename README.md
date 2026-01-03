@@ -31,13 +31,24 @@ This blueprint is better because it cleanly separates concerns:
 
 ## 🔧 Installation
 
-### Easiest way — via HACS
-> ℹ️ [What is HACS](#-appendix-1--what-is-hacs)?
+### ✨ Easiest way — via HACS
+> ℹ️ [What is HACS?](#-appendix-1--what-is-hacs)
 
 1. Open **HACS → Blueprints**
 2. Search for: `Z2M Knob — Gesture Action Controller`
-3. Install the blueprint
+3. Install it
 4. Restart Home Assistant (please make full restart, not only automations reload. This needed because integration installs noise filter sensor to configuration)
+
+### 👨‍💻 Manual way
+1. Copy files from CONFIG directory of this repository to CONFIG directory of your Home Assistant
+2. Ensure packages are enabled in CONFIG/configuration.yaml  
+The following line (packages) is required. If it does not exist, add it:
+```yaml
+homeassistant:
+  packages: !include_dir_named packages
+```
+3. Restart Home Assistant
+
 
 ## 🛍 Appendix 1 — What is HACS?
 
