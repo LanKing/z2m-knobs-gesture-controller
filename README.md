@@ -12,7 +12,7 @@ Assign your actions to Zigbee2MQTT rotary-knob gestures in Home Assistant. Suppo
 
 ## 💡 Why this blueprint is better than writing custom knob automations
 
-Out of the box, Zigbee2MQTT rotary knobs only publish raw MQTT events.
+Out of the box, Zigbee2MQTT rotary knobs only publish raw MQTT events.  
 You *can* wire them directly into your automations — but that means:
 
 - spending time inspecting and decoding raw MQTT payloads
@@ -29,23 +29,23 @@ This blueprint is better because it cleanly separates concerns:
 
 Your scripts stay small and focused on behavior, while the knob logic is configured once and reused everywhere.
 
-## 📎 Appendix 1 — What is HACS?
+## 🛍 Appendix 1 — What is HACS?
 
 HACS (Home Assistant Community Store) is a community-driven extension system for Home Assistant.
 It allows you to install third-party blueprints, integrations, dashboards, and custom components directly from GitHub — with update notifications and version management.
 
 ### How to install HACS
 
-#### The easiest way (Home Assistant OS / Supervised):
+#### 🟢 The easiest way (Home Assistant OS / Supervised):
 1. Go to **Settings → Add-ons → Add-on Store**
 2. Search for **HACS**
 3. Install the add-on and start it
 4. Restart Home Assistant
 5. Go to **Settings → Devices & Services → Add Integration → HACS**
 6. Complete GitHub authorization:
-> During the first-time setup, HACS will ask you to sign in to GitHub and authorize access.
-> You need a GitHub account for this (create one if needed: [https://github.com/signup](https://github.com/signup)).
-> 🧘‍♂️ The authorization is read-only — HACS can only download public repositories and cannot modify your GitHub account or data.
+> During the first-time setup, HACS will ask you to sign in to GitHub and authorize access.  
+> You need a GitHub account for this (create one if needed: [https://github.com/signup](https://github.com/signup)).  
+> 🧘‍♂️ The authorization is read-only — HACS can only download public repositories and cannot modify your GitHub account or data.  
 
-#### Alternative method (Docker / Core):
+#### 🟣 Alternative method (Docker / Core):
 Follow the official manual install guide: [https://hacs.xyz/docs/use/download](https://hacs.xyz/docs/use/download)
