@@ -14,6 +14,7 @@ Assign your actions to Zigbee2MQTT rotary-knob gestures in Home Assistant. Suppo
 
 Out of the box, Zigbee2MQTT rotary knobs only publish raw MQTT events.
 You *can* wire them directly into your automations — but that means:
+
 - spending time inspecting and decoding raw MQTT payloads
 - writing and maintaining custom automation logic for every knob
 - duplicating the same mapping patterns across multiple automations
