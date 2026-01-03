@@ -23,12 +23,13 @@ You *can* wire them directly into your automations — but that means:
 🎯 This blueprint is better because it turns raw MQTT events into clean, human-friendly gestures and lets you configure all actions through the UI — with zero YAML and zero custom automations. Instead of fighting payloads, you simply choose what each gesture does.
 
 It also cleanly separates concerns:
-- works as a reusable gesture-controller layer for any supported knob
+- works as a reusable **gesture-controller layer** for any supported knob
 - converts unpredictable MQTT events into consistent gestures (single, double, hold, rotate…)
 - handles Command/Event modes and noise filtering automatically, in one place
 - exposes a simple action interface with optional helper variables when you need more control
 
 Your scripts stay small and focused on behavior, while the knob logic is configured once and reused everywhere.
+
 
 ## 🛠 Installation
 
