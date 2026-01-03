@@ -16,7 +16,7 @@ Out of the box, Zigbee2MQTT rotary knobs only publish raw MQTT events.
 You *can* wire them directly into your automations — but that means:
 
 - spending time inspecting and decoding raw MQTT payloads
-- writing and maintaining custom automation logic for every knob
+- writing and maintaining custom automation logic
 - duplicating the same mapping patterns across multiple automations
 - mixing low-level device-handling code with your real logic (lights, scenes, etc.)
 - debugging false “tail” events and edge-case behaviors
@@ -27,7 +27,7 @@ This blueprint is better because it cleanly separates concerns:
 - handles Command/Event modes and noise filtering centrally
 - exposes a clean action interface with optional helper variables
 
-Your scripts stay small and focused on behavior, while the knob logic is configured once and reused everywhere.
+🎉 Your scripts stay small and focused on behavior, while the knob logic is configured once and reused everywhere.
 
 ## 🛍 Appendix 1 — What is HACS?
 
