@@ -29,6 +29,16 @@ This blueprint is better because it cleanly separates concerns:
 
 🎉 Your scripts stay small and focused on behavior, while the knob logic is configured once and reused everywhere.
 
+## 🔧 Installation
+
+### Easiest way — via HACS
+> ℹ️ [What is HACS](#-appendix-1--what-is-hacs)?
+
+1. Open **HACS → Blueprints**
+2. Search for: `Z2M Knob — Gesture Action Controller`
+3. Install the blueprint
+4. Restart Home Assistant (please make full restart, not only automations reload. This needed because integration installs noise filter sensor to configuration)
+
 ## 🛍 Appendix 1 — What is HACS?
 
 HACS (Home Assistant Community Store) is a community-driven extension system for Home Assistant.
