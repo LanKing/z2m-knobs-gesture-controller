@@ -12,19 +12,18 @@ Assign your actions to Zigbee2MQTT rotary-knob gestures in Home Assistant. Suppo
 
 ## 💡 Why this blueprint is better than writing custom knob automations
 
-Out of the box, Zigbee2MQTT rotary knobs only publish raw MQTT events.  
+Out of the box, Zigbee2MQTT rotary knobs only publish raw MQTT events.
 You *can* wire them directly into your automations — but that means:
+- spending time inspecting and decoding raw MQTT payloads
+- writing and maintaining custom automation logic for every knob
+- duplicating the same mapping patterns across multiple automations
+- mixing low-level device-handling code with your real logic (lights, scenes, etc.)
+- debugging false “tail” events and edge-case behaviors
 
-- decoding and tracking low-level events yourself
-- mixing “knob driver / event parsing” logic with your real logic (lights, scenes, etc.)
-- duplicating the same mapping code for every knob and every setup
-
-This blueprint is better because it separates concerns:
-
-- works as a reusable **gesture controller layer**
-- normalizes raw MQTT events into clean gestures (single, double, hold, rotate…)
+This blueprint is better because it cleanly separates concerns:
+- acts as a reusable **gesture-controller layer**
+- normalizes raw MQTT events into clear gestures (single, double, hold, rotate…)
 - handles Command/Event modes and noise filtering centrally
 - exposes a clean action interface with optional helper variables
 
-Your scripts stay small and focused on behavior,  
-while the knob logic is configured once and reused everywhere.
+Your scripts stay small and focused on behavior, while the knob logic is configured once and reused everywhere.
