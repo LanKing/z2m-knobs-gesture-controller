@@ -27,9 +27,9 @@ This blueprint is better because it cleanly separates concerns:
 - handles Command/Event modes and noise filtering centrally
 - exposes a clean action interface with optional helper variables
 
-🎉 Your scripts stay small and focused on behavior, while the knob logic is configured once and reused everywhere.
+**Your scripts stay small and focused on behavior, while the knob logic is configured once and reused everywhere.**
 
-## 🔧 Installation
+## 🛠 Installation
 
 ### ✨ Easiest way — via HACS
 > ℹ️ [What is HACS?](#-appendix-1--what-is-hacs)
