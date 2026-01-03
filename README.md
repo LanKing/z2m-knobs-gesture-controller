@@ -22,7 +22,7 @@ You *can* wire them directly into your automations — but that means:
 - debugging false “tail” events and edge-case behaviors
 
 This blueprint is better because it cleanly separates concerns:
-- acts as a reusable **gesture-controller layer**
+- acts as a reusable gesture-controller layer
 - normalizes raw MQTT events into clear gestures (single, double, hold, rotate…)
 - handles Command/Event modes and noise filtering centrally
 - exposes a clean action interface with optional helper variables
