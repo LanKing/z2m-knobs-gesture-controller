@@ -20,13 +20,15 @@ You *can* wire them directly into your automations — but that means:
 - mixing low-level device-handling code with your real logic (lights, scenes, etc.)
 - debugging false “tail” events and edge-case behaviors
 
-This blueprint is better because it cleanly separates concerns:
-- acts as a reusable gesture-controller layer
-- normalizes raw MQTT events into clear gestures (single, double, hold, rotate…)
-- handles Command/Event modes and noise filtering centrally
-- exposes a clean action interface with optional helper variables
+🎯 This blueprint is better because it turns raw MQTT events into clean, human-friendly gestures and lets you configure all actions through the UI — with zero YAML and zero custom automations. Instead of fighting payloads, you simply choose what each gesture does.
 
-**Your scripts stay small and focused on behavior, while the knob logic is configured once and reused everywhere.**
+It also cleanly separates concerns:
+- works as a reusable gesture-controller layer for any supported knob
+- converts unpredictable MQTT events into consistent gestures (single, double, hold, rotate…)
+- handles Command/Event modes and noise filtering automatically, in one place
+- exposes a simple action interface with optional helper variables when you need more control
+
+Your scripts stay small and focused on behavior, while the knob logic is configured once and reused everywhere.
 
 ## 🛠 Installation
 
