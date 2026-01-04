@@ -1,6 +1,10 @@
 # ⏲️ Z2M Knob — Gesture Action Controller (Moes ZG-101ZD & similar AliExpress-sold knobs)
 Assign your actions to Zigbee2MQTT rotary-knob gestures in Home Assistant. Supports Command/Event modes and includes noise filtering for false “tail” events.
 
+🔗 Quick navigation: [How to use] [Installation]
+
+
+
 ## ✨ Features
 - Works with many Zigbee2MQTT rotary-knobs (brands such as Moes, Girier, and others — mostly AliExpress-sold models)
 - Bind gestures to any HA actions or scripts, with optional helper parameters (gesture, step_size, rate, etc.)
@@ -30,6 +34,38 @@ It also cleanly separates concerns:
 
 Your scripts stay small and focused on behavior, while the knob logic is configured once and reused everywhere.
 
+## How to use
+
+### Base usage
+
+1. Create an automation from this blueprint in your Home Assistant: Settings → Automations & Scenes → Automations → Add Automation → Use Blueprint. Select: “Z2M Knob — Gesture Action Controller” from drop-down list.
+2. Set the MQTT topic of your knob. Open Zigbee2MQTT → Devices → choose your knob → copy its Friendly name. Replace `your_knob_friendly_name` to copied value. Example: zigbee2mqtt/Bedroom_Knob. Now automation monitors events from your concrete knob.
+3. Assign your actions to gestures (what each gesture will do). 
+
+### Advanced usage
+
+#### Debugging
+Use Debug mode to test behavior. Set Debug = `notification`. A new notification will appear in HA. 
+Open it, rotate and click the knob, and watch how gestures are mapped.
+
+This helps you:
+- see the **native event** coming from the device 
+- verify whether an event was filtered as a “tail”  
+- check the current **operation mode** (command/event)
+
+If your knob produces different event values —  adjust them in the **gesture binding table** in the blueprint inputs.
+If your knob uses a different operation-mode model — copy the debug payload and send it to me, I will add support.
+
+#### Additional parameters for scripts
+If you are advanced user and use scripts as actions, you can add parameters from automation.
+
+## 🐞 Troubleshooting
+- No actions trigger → enable Debug mode and check notifications/logs  
+- Events look duplicated → increase noise filter window (ms)  
+- Sensor unavailable → create the MQTT sensor and restart HA  
+- Knob uses different payload values → adjust the binding table in inputs  
+
+
 
 ## 🛠 Installation
 
@@ -49,6 +85,18 @@ homeassistant:
   packages: !include_dir_named packages
 ```
 3. Restart Home Assistant
+
+
+## 📌 Compatibility
+Tested primarily with:
+- Moes ZG-101ZD  
+- Zigbee2MQTT-compatible rotary knobs from Moes / Girier and similar brands  
+
+Most similar Z2M knobs should work as long as their events can be mapped to gestures.
+
+
+## 📄 License
+MIT — contributions welcome.
 
 
 ## 🛍 Appendix 1 — What is HACS?
