@@ -34,7 +34,7 @@ It also cleanly separates concerns:
 
 Your scripts stay small and focused on behavior, while the knob logic is configured once and reused everywhere.
 
-## How to use
+## ⚙️ How to use
 
 ### Base usage
 
