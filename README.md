@@ -32,6 +32,8 @@ It also cleanly separates concerns:
 
 Your scripts stay small and focused on behavior, while the knob logic is configured once and reused everywhere.
 
+---
+
 ## 🗺️ How to use
 
 ### Base usage
@@ -63,7 +65,7 @@ If you are advanced user and use scripts as actions, you can add parameters from
 - Sensor unavailable → create the MQTT sensor and restart HA  
 - Knob uses different payload values → adjust the binding table in inputs  
 
-
+---
 
 ## 🛠 Installation
 
@@ -96,6 +98,7 @@ Most similar Z2M knobs should work as long as their events can be mapped to gest
 ## 📄 License
 MIT — contributions welcome.
 
+---
 
 ## 🛍 Appendix 1 — What is HACS?
 
