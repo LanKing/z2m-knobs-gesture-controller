@@ -41,7 +41,7 @@ Your scripts stay small and focused on behavior, while the knob logic is configu
 4. Restart Home Assistant (please make full restart, not only automations reload. This needed because integration installs noise filter sensor to configuration)
 
 ### 👨‍💻 Manual way
-1. Copy files from CONFIG directory of this repository to CONFIG directory of your Home Assistant
+1. Copy [those files](https://github.com/LanKing/z2m-knobs-gesture-controller/CONFIG) to Home Assistant CONFIG directory
 2. Ensure packages are enabled in CONFIG/configuration.yaml  
 The following line (packages) is required. If it does not exist, add it:
 ```yaml
