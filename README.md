@@ -34,6 +34,9 @@ Your scripts stay small and focused on behavior, while the knob logic is configu
 
 ---
 
+## 🖼 Screenshots
+[Knob gestures to your Actions](screenshots/z2m_moes_knobs_gestures_to_actions.png)
+
 ## 🗺️ How to use
 
 ### 🔰 Basic usage
