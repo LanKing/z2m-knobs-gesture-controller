@@ -36,13 +36,13 @@ Your scripts stay small and focused on behavior, while the knob logic is configu
 
 ## 🗺️ How to use
 
-### Base usage
+### 🔰 Basic usage
 
 1. Create an automation from this blueprint in your Home Assistant: Settings → Automations & Scenes → Automations → Add Automation → Use Blueprint. Select: “Z2M Knob — Gesture Action Controller” from drop-down list.
 2. Set the MQTT topic of your knob. Open Zigbee2MQTT → Devices → choose your knob → copy its Friendly name. Replace `your_knob_friendly_name` to copied value. Example: zigbee2mqtt/Bedroom_Knob. Now automation monitors events from your concrete knob.
 3. Assign your actions to gestures (what each gesture will do). 
 
-### Advanced usage
+### 🚀 Advanced usage
 
 #### Debugging
 Use Debug mode to test behavior. Set Debug = `notification`. A new notification will appear in HA. 
