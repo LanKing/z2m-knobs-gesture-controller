@@ -58,16 +58,9 @@ It allows you to install third-party blueprints, integrations, dashboards, and c
 
 ### How to install HACS
 
-#### 🟢 The easiest way (Home Assistant OS / Supervised):
-1. Go to **Settings → Add-ons → Add-on Store**
-2. Search for **HACS**
-3. Install the add-on and start it
-4. Restart Home Assistant
-5. Go to **Settings → Devices & Services → Add Integration → HACS**
-6. Complete GitHub authorization:
 > During the first-time setup, HACS will ask you to sign in to GitHub and authorize access.  
 > You need a GitHub account for this (create one if needed: [https://github.com/signup](https://github.com/signup)).  
 > 🧘‍♂️ The authorization is read-only — HACS can only download public repositories and cannot modify your GitHub account or data.  
 
-#### 🟣 Alternative method (Docker / Core):
-Follow the official manual install guide: [https://hacs.xyz/docs/use/download](https://hacs.xyz/docs/use/download)
+👉 [Follow the official HACS setup instruction](https://hacs.xyz/docs/use/#getting-started-with-hacs)
+
