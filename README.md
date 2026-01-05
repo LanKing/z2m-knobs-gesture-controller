@@ -11,6 +11,7 @@
 Assign your own actions to Zigbee2MQTT rotary-knob gestures in Home Assistant. Supports Command/Event modes and includes noise filtering for false “tail” events.
 
 🗺️ [How to use](#how-to-use)  🛠 [Installation](#-installation)  🐞 [Troubleshooting](#-troubleshooting)
+
 ---
 
 ## ✨ Features
