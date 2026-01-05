@@ -2,10 +2,15 @@
 
 # ⏲️ Z2M Knob — Gesture Action Controller (Moes ZG-101ZD & similar AliExpress-sold knobs)
 [![HACS Default](https://img.shields.io/badge/HACS-Default-blue)](https://hacs.xyz/)
-[![Blueprint](https://img.shields.io/badge/Home%20Assistant-Blueprint-41BDF5)](https://www.home-assistant.io/docs/blueprint/)
-[![Zigbee2MQTT](https://img.shields.io/badge/Zigbee2MQTT-Compatible-orange)](https://www.zigbee2mqtt.io/)
-[![Version](https://img.shields.io/badge/Release-1.0.0-green)](https://github.com/LanKing/z2m-knobs-gesture-controller/releases)
-[![License](https://img.shields.io/badge/License-MIT-lightgrey)](LICENSE)
+[![Blueprint](https://img.shields.io/badge/Home%20Assistant-Blueprint-41BDF5)](https://www.home-assistant.io/)
+[![Zigbee2MQTT](https://img.shields.io/badge/Zigbee2MQTT-Compatible-FFCC33)](https://www.zigbee2mqtt.io/)
+
+[![Type](https://img.shields.io/badge/Type-Gesture%20Controller-6f42c1)](#-features)
+[![MQTT](https://img.shields.io/badge/Input-MQTT%20Events-8A2BE2)](https://www.home-assistant.io/integrations/mqtt/)
+[![Noise Filtering](https://img.shields.io/badge/Feature-Noise%20Filtering-9cf)](#-features)
+
+[![Status](https://img.shields.io/badge/Status-Stable-success)](https://github.com/LanKing/z2m-knobs-gesture-controller/releases)
+[![License](https://img.shields.io/badge/License-MIT-green)](LICENSE)
 
 Assign your own actions to Zigbee2MQTT rotary-knob gestures in Home Assistant. Supports Command/Event modes and includes noise filtering for false “tail” events.
 
