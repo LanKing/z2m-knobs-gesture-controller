@@ -4,10 +4,7 @@
 
 [![HACS Default](https://img.shields.io/badge/HACS-Default-41BDF5)](https://hacs.xyz/)
 [![Home Assistant Blueprint](https://img.shields.io/badge/Home%20Assistant-Blueprint-41BDF5)](https://www.home-assistant.io/)
-[![Zigbee2MQTT](https://img.shields.io/badge/Zigbee2MQTT-Docs-5a9fd4)](https://www.zigbee2mqtt.io/)
-[![Type: Gesture Controller](https://img.shields.io/badge/Type-Gesture%20Controller-8e44ad)](#-features)
-[![MQTT](https://img.shields.io/badge/Protocol-MQTT-6600cc)](https://mqtt.org/)
-[![Noise Filtering](https://img.shields.io/badge/Feature-Noise%20Filtering-555555)](#-noise-filter-window)
+[![Zigbee2MQTT](https://img.shields.io/badge/Zigbee2MQTT-Docs-f39c12)](https://www.zigbee2mqtt.io/)
 [![Status: Stable](https://img.shields.io/badge/Status-Stable-brightgreen)](#-compatibility)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellowgreen)](LICENSE)
 
