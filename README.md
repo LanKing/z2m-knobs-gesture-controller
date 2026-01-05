@@ -1,6 +1,3 @@
-🗺️ [How to use](#%EF%B8%8F-how-to-use)  🛠 [Installation](#-installation)  🐞 [Troubleshooting](#-troubleshooting)
-
-# ⏲️ Z2M Knob — Gesture Action Controller (Moes ZG-101ZD & similar AliExpress-sold knobs)
 
 [![HACS Default](https://img.shields.io/badge/HACS-Default-41BDF5)](https://hacs.xyz/)
 [![Home Assistant Blueprint](https://img.shields.io/badge/Home%20Assistant-Blueprint-41BDF5)](https://www.home-assistant.io/)
@@ -8,7 +5,12 @@
 [![Status: Stable](https://img.shields.io/badge/Status-Stable-brightgreen)](#-compatibility)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellowgreen)](LICENSE)
 
+
+# ⏲️ Z2M Knob — Gesture Action Controller (Moes ZG-101ZD & similar AliExpress-sold knobs)
+
 Assign your own actions to Zigbee2MQTT rotary-knob gestures in Home Assistant. Supports Command/Event modes and includes noise filtering for false “tail” events.
+
+🗺️ [How to use](#%EF%B8%8F-how-to-use)  🛠 [Installation](#-installation)  🐞 [Troubleshooting](#-troubleshooting)
 
 ## ✨ Features
 - Works with many Zigbee2MQTT rotary knobs (brands such as Moes, Girier, and others — mostly AliExpress-sold models)
