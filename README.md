@@ -1,7 +1,7 @@
 [![Home Assistant Blueprint](https://img.shields.io/badge/Home%20Assistant-Blueprint-41BDF5)](https://www.home-assistant.io/)
 [![HACS Default](https://img.shields.io/badge/HACS-Default-41BDF5)](https://hacs.xyz/)
 [![Zigbee2MQTT](https://img.shields.io/badge/Zigbee2MQTT-Docs-f39c12)](https://www.zigbee2mqtt.io/)
-[![Status: Stable](https://img.shields.io/badge/Status-Stable-brightgreen)](/releases)
+[![Status: Stable](https://img.shields.io/badge/Status-Stable-brightgreen)](releases/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellowgreen)](LICENSE)
 
 
