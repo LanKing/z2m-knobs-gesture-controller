@@ -61,8 +61,7 @@ Noise filter window is amount of time in miliseconds, during which after knob ro
 500ms is good enough, but you can tune it manually. Please, [use debugger](#-debugging) to test your events and check if filter window has good size for you.
 
 #### 🐞 Debugging
-Use Debug mode to test behavior. Set Debug = `notification`. A new notification will appear in HA. 
-Open it, rotate and click the knob, and watch how gestures are mapped.
+Use Debug mode to test behavior. Set Debug = `notification`. A new notification will appear in HA. Open it, rotate and click the knob, and discover how gestures are mapped.
 
 ![Debug notification](screenshots/z2m_moes_knobs_debug_notification.png)
 
@@ -82,11 +81,11 @@ If your knob has other events than in blueprint ([use debugger](#-debugging) to 
 If you are advanced user and use scripts as actions, you can add parameters from automation.
 
 ## 🤯 Troubleshooting
-- No actions trigger → Check correct MQTT topic. Enable Debug mode and check notifications/logs
-- False gestures activating after rotation → increase noise filter window (ms)  
+- No actions trigger → Check correct MQTT topic. Enable Debug mode and [check notifications/logs](#-debugging)
+- False gestures activating after rotation → increase [noise filter window (ms)](#-debugging)
 - Sensor unavailable → create the MQTT sensor and restart HA
-- Knob uses different payload values → adjust the binding table in inputs
-- Knob uses a different operation-mode model → copy the debug data and send it to me, I will add support
+- Knob uses different payload values → [adjust the binding table in inputs](#-advanced-usage)
+- Knob uses a different operation-mode model → copy the debug data and send it to me, I will add support 🤝
 
 ---
 
