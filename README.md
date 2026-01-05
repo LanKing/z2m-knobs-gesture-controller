@@ -53,14 +53,14 @@ Your scripts stay small and focused on behavior, while the knob logic is configu
 
 ### 🚀 Advanced usage
 
-![Fine tuning](screenshots/z2m_moes_knobs_advanced_tuning.png]
+![Fine tuning](screenshots/z2m_moes_knobs_advanced_tuning.png)
 
-#### Noise filter window
+#### 🔇 Noise filter window
 Problem is hext: If you did not use noise filter and rotate with hold, after releasing knob you will got false single or toggle event that is useless and can make unwanted action. 
 Noise filter window is amount of time in miliseconds, during which after knob rotate events will be ignored.
-500ms is good enough, but you can tune it manually. Please, [use debugger](#debugging) to test your events and check if filter window has good size for you.
+500ms is good enough, but you can tune it manually. Please, [use debugger](#-debugging) to test your events and check if filter window has good size for you.
 
-#### Debugging
+#### 🐞 Debugging
 Use Debug mode to test behavior. Set Debug = `notification`. A new notification will appear in HA. 
 Open it, rotate and click the knob, and watch how gestures are mapped.
 
@@ -75,13 +75,13 @@ If your knob produces different event values —  adjust them in the **gesture b
 
 If your knob uses a different operation-mode model — copy the debug data and send it to me, I will add support.
 
-#### Low level events to gestures
-If your knob has other events than in blueprint ([use debugger](#debugging) to test them), you can re-bind native knob events to gestures. Write your events on the right side (one event per line).
+#### 🔗 Low level events to gestures
+If your knob has other events than in blueprint ([use debugger](#-debugging) to test them), you can re-bind native knob events to gestures. Write your events on the right side (one event per line).
 
 #### Additional parameters for scripts
 If you are advanced user and use scripts as actions, you can add parameters from automation.
 
-## 🐞 Troubleshooting
+## 🤯 Troubleshooting
 - No actions trigger → Check correct MQTT topic. Enable Debug mode and check notifications/logs
 - False gestures activating after rotation → increase noise filter window (ms)  
 - Sensor unavailable → create the MQTT sensor and restart HA
