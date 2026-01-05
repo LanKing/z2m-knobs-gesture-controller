@@ -66,16 +66,18 @@ This helps you:
 - check the current **operation mode** (command/event)
 
 If your knob produces different event values —  adjust them in the **gesture binding table** in the blueprint inputs.
-If your knob uses a different operation-mode model — copy the debug payload and send it to me, I will add support.
+
+If your knob uses a different operation-mode model — copy the debug data and send it to me, I will add support.
 
 #### Additional parameters for scripts
 If you are advanced user and use scripts as actions, you can add parameters from automation.
 
 ## 🐞 Troubleshooting
-- No actions trigger → enable Debug mode and check notifications/logs  
-- Events look duplicated → increase noise filter window (ms)  
-- Sensor unavailable → create the MQTT sensor and restart HA  
-- Knob uses different payload values → adjust the binding table in inputs  
+- No actions trigger → Check correct MQTT topic. Enable Debug mode and check notifications/logs
+- False gestures activating after rotation → increase noise filter window (ms)  
+- Sensor unavailable → create the MQTT sensor and restart HA
+- Knob uses different payload values → adjust the binding table in inputs
+- Knob uses a different operation-mode model → copy the debug data and send it to me, I will add support
 
 ---
 
