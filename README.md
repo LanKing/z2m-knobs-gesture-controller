@@ -120,14 +120,14 @@ There are two ways to add a script as a gesture action.
 ```yaml
 action: script.debug_variables_from_lanking_blueprint
 data:
-  gesture: "{{ gesture }}"
-  native_event: "{{ native_event }}"
-  operation_mode: "{{ operation_mode }}"
-  step_size: "{{ step_size }}"
-  rate: "{{ rate }}"
-  topic: "{{ topic }}"
-  raw: "{{ raw }}"
-  payload_json: "{{ payload_json }}"
+  gesture: "{{ gesture | default('') }}"
+  native_event: "{{ native_event | default('') }}"
+  operation_mode: "{{ operation_mode | default('unknown') }}"
+  step_size: "{{ step_size | default(0) }}"
+  rate: "{{ rate | default(0) }}"
+  topic: "{{ topic | default('') }}"
+  raw: "{{ raw | default('') }}"
+  payload_json: "{{ payload_json | default({}) }}"
 ```
 
 ##### 2️⃣ Script Turn On (recommended)
@@ -138,14 +138,14 @@ target:
   entity_id: script.debug_variables_from_lanking_blueprint
 data:
   variables:
-    gesture: "{{ gesture }}"
-    native_event: "{{ native_event }}"
-    operation_mode: "{{ operation_mode }}"
-    step_size: "{{ step_size }}"
-    rate: "{{ rate }}"
-    topic: "{{ topic }}"
-    raw: "{{ raw }}"
-    payload_json: "{{ payload_json }}"
+    gesture: "{{ gesture | default('') }}"
+    native_event: "{{ native_event | default('') }}"
+    operation_mode: "{{ operation_mode | default('unknown') }}"
+    step_size: "{{ step_size | default(0) }}"
+    rate: "{{ rate | default(0) }}"
+    topic: "{{ topic | default('') }}"
+    raw: "{{ raw | default('') }}"
+    payload_json: "{{ payload_json | default({}) }}"
 enabled: true
 ```
 
