@@ -47,7 +47,7 @@ Your scripts stay small and focused on behavior, while the knob logic is configu
 
 ---
 
-## How to use
+## 🗺️ How to use
 
 ### 🔰 Basic usage
 
