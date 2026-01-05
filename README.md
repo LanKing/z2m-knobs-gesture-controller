@@ -58,7 +58,7 @@ Your scripts stay small and focused on behavior, while the knob logic is configu
 #### Debugging
 Use Debug mode to test behavior. Set Debug = `notification`. A new notification will appear in HA. 
 Open it, rotate and click the knob, and watch how gestures are mapped.
-![Debug notification](screenshots/screenshots/z2m_moes_knobs_debug_notification.png)
+![Debug notification](screenshots/z2m_moes_knobs_debug_notification.png)
 
 This helps you:
 - see the **native event** coming from the device 
