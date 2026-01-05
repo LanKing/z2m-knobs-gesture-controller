@@ -1,11 +1,11 @@
 🗺️ [How to use](#%EF%B8%8F-how-to-use)  🛠 [Installation](#-installation)  🐞 [Troubleshooting](#-troubleshooting)
 
 # ⏲️ Z2M Knob — Gesture Action Controller (Moes ZG-101ZD & similar AliExpress-sold knobs)
-![HACS](https://img.shields.io/badge/HACS-Ready-2384e2)
-![Type](https://img.shields.io/badge/Type-Gesture%20Controller-6f42c1)
-![MQTT](https://img.shields.io/badge/MQTT-Events-8A2BE2)
-![Stable](https://img.shields.io/badge/Status-Stable-success)
-![License](https://img.shields.io/badge/MIT-License-lightgrey)
+[![HACS Default](https://img.shields.io/badge/HACS-Default-blue)](https://hacs.xyz/)
+[![Blueprint](https://img.shields.io/badge/Home%20Assistant-Blueprint-41BDF5)](https://www.home-assistant.io/docs/blueprint/)
+[![Zigbee2MQTT](https://img.shields.io/badge/Zigbee2MQTT-Compatible-orange)](https://www.zigbee2mqtt.io/)
+[![Version](https://img.shields.io/badge/Release-1.0.0-green)](https://github.com/LanKing/z2m-knobs-gesture-controller/releases)
+[![License](https://img.shields.io/badge/License-MIT-lightgrey)](LICENSE)
 
 Assign your own actions to Zigbee2MQTT rotary-knob gestures in Home Assistant. Supports Command/Event modes and includes noise filtering for false “tail” events.
 
