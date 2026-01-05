@@ -12,6 +12,10 @@ Assign your actions to Zigbee2MQTT rotary-knob gestures in Home Assistant. Suppo
 - Supports configuring automation mode and maximum concurrent runs
 - Debug output available via notifications or logs
 
+_Main concept of blueprint — assigning your actions to gestures. Other screenshots are bellow._
+![Knob gestures to your Actions](screenshots/z2m_moes_knobs_gestures_to_actions.png)
+
+
 ## 💡 Why this blueprint is better than writing custom knob automations
 
 Out of the box, Zigbee2MQTT rotary knobs only publish raw MQTT events.  
@@ -36,7 +40,7 @@ Your scripts stay small and focused on behavior, while the knob logic is configu
 
 ## 🖼 Screenshots
 ### Knob gestures to your actions:
-![Knob gestures to your Actions](screenshots/z2m_moes_knobs_gestures_to_actions.png)
+
 
 
 
@@ -58,6 +62,7 @@ Your scripts stay small and focused on behavior, while the knob logic is configu
 #### Debugging
 Use Debug mode to test behavior. Set Debug = `notification`. A new notification will appear in HA. 
 Open it, rotate and click the knob, and watch how gestures are mapped.
+
 ![Debug notification](screenshots/z2m_moes_knobs_debug_notification.png)
 
 This helps you:
