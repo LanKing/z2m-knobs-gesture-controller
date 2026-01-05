@@ -56,9 +56,9 @@ Your scripts stay small and focused on behavior, while the knob logic is configu
 ![Fine tuning](screenshots/z2m_moes_knobs_advanced_tuning.png)
 
 #### 🔇 Noise filter window
-Problem is hext: If you did not use noise filter and rotate with hold, after releasing knob you will got false single or toggle event that is useless and can make unwanted action. 
-Noise filter window is amount of time in miliseconds, during which after knob rotate events will be ignored.
-500ms is good enough, but you can tune it manually. Please, [use debugger](#-debugging) to test your events and check if filter window has good size for you.
+Problem is hext: If you did not use noise filter and rotate with hold, after releasing knob you will got false single or toggle event that is useless and can make unwanted action.  
+Noise filter window is amount of time in miliseconds, during which after knob rotate events will be ignored.  
+500ms is good enough, but you can tune it manually. Please, [use debugger](#-debugging) to test your events and check if filter window has good size for you.  
 
 #### 🐞 Debugging
 Use Debug mode to test behavior. Set Debug = `notification`. A new notification will appear in HA. Open it, rotate and click the knob, and discover how gestures are mapped.
