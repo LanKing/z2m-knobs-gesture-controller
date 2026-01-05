@@ -79,8 +79,74 @@ If your knob uses a different operation-mode model — copy the debug data and s
 #### 🔗 Low level events to gestures
 If your knob has other events than in blueprint ([use debugger](#-debugging) to test them), you can re-bind native knob events to gestures. Enter your event names in the right-side field (one per line).
 
-#### Additional parameters for scripts
-If you are advanced user and use scripts as actions, you can add parameters from automation.
+#### 👨‍🏫 Additional parameters for scripts
+
+If you are an advanced user and use scripts as actions, you can pass additional parameters from the automation to your script.
+
+Below is an example of how to use this. First, create a script.
+
+##### Creating a test script
+
+Settings → Automations & Scenes → Scripts → Create Script → Create new script → ⋮ (menu) → Edit as YAML
+
+Example script:
+
+```yaml
+alias: "Debug variables from Lanking blueprint"
+mode: parallel
+sequence:
+  - action: persistent_notification.create
+    data:
+      title: "Debug variables from Lanking blueprint"
+      message: >-
+        gesture={{ gesture }}, native_event={{ native_event }},
+        operation_mode={{ operation_mode }}, step_size={{ step_size }},
+        rate={{ rate }}
+description: ""
+```
+
+Great — now you can call this script from your automation. However, you must explicitly pass every variable that you want to use inside the script.
+
+There are two ways to add a script as a gesture action.
+
+##### 1️⃣ Call service (legacy / older HA versions)
+
+```yaml
+action: script.debug_variables_from_lanking_blueprint
+data:
+  gesture: "{{ gesture }}"
+  native_event: "{{ native_event }}"
+  operation_mode: "{{ operation_mode }}"
+  step_size: "{{ step_size }}"
+  rate: "{{ rate }}"
+  topic: "{{ topic }}"
+  raw: "{{ raw }}"
+  payload_json: "{{ payload_json }}"
+```
+
+##### 2️⃣ Script Turn On (recommended)
+
+```yaml
+action: script.turn_on
+target:
+  entity_id: script.debug_variables_from_lanking_blueprint
+data:
+  variables:
+    gesture: "{{ gesture }}"
+    native_event: "{{ native_event }}"
+    operation_mode: "{{ operation_mode }}"
+    step_size: "{{ step_size }}"
+    rate: "{{ rate }}"
+    topic: "{{ topic }}"
+    raw: "{{ raw }}"
+    payload_json: "{{ payload_json }}"
+enabled: true
+```
+
+> **In both cases, you need to switch to YAML mode to add the code.**
+
+After saving, trigger a gesture on your knob and check the result in the notification.
+
 
 ## 🤯 Troubleshooting
 - No actions trigger → Check correct MQTT topic. Enable Debug mode and [check notifications/logs](#-debugging)
