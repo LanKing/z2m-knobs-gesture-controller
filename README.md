@@ -10,7 +10,7 @@
 
 Assign your own actions to Zigbee2MQTT rotary-knob gestures in Home Assistant. Supports Command/Event modes and includes noise filtering for false “tail” events.
 
-🗺️ [How to use](#%EF%B8%8F-how-to-use)  🛠 [Installation](#-installation)  🐞 [Troubleshooting](#-troubleshooting)
+🗺️ [How to use](#how-to-use)  🛠 [Installation](#-installation)  🐞 [Troubleshooting](#-troubleshooting)
 
 ## ✨ Features
 - Works with many Zigbee2MQTT rotary knobs (brands such as Moes, Girier, and others — mostly AliExpress-sold models)
@@ -47,7 +47,7 @@ Your scripts stay small and focused on behavior, while the knob logic is configu
 
 ---
 
-## 🗺️ How to use
+<h2 id="how-to-use">🗺️ How to use</h2>
 
 ### 🔰 Basic usage
 
