@@ -1,0 +1,33 @@
+# LanKing Z2M Device States
+#
+# This sensor is a required part of the z2m-knobs-gesture-controller
+# (https://github.com/LanKing/z2m-knobs-gesture-controller)
+# It is used to filter false tail rotate events that occur
+# after hold+rotate gestures.
+#
+# Topic used:
+#   ha/lanking/z2m_devices_states
+#
+# Install once for all knobs.
+#
+# 💻 MANUAL INSTALLATION:
+#
+# 1. Copy THIS FILE exactly as-is to:
+#    /config/packages/lanking_z2m_device_states.yaml
+#
+# 2. Ensure packages are enabled in CONFIG/configuration.yaml
+#    (the following line (packages) is required. If it does not exist, add it WITHOUT leading '#'):
+#
+#  homeassistant:
+#    packages: !include_dir_named packages
+#
+# 3. Restart Home Assistant
+#
+# 👋 Have questions?
+# https://github.com/LanKing
+#
+mqtt:
+  sensor:
+    - name: "LanKing Z2M Device States"
+      unique_id: lanking_z2m_device_states
+      state_topic: "ha/lanking/z2m_device_states"
