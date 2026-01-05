@@ -188,7 +188,7 @@ homeassistant:
 
 ## 📌 Compatibility
 Tested primarily with:
-- Moes ZG-101ZD  
+- [Moes ZG-101ZD](https://www.zigbee2mqtt.io/devices/ZG-101ZD.html)
 - Zigbee2MQTT-compatible rotary knobs from Moes / Girier and similar brands  
 
 Most similar Z2M knobs should work as long as their events can be mapped to gestures.
