@@ -1,4 +1,4 @@
-🗺️ [How to use](#%EF%B8%8F-how-to-use)  🛠 [Installation](#-installation)  🐞 [Troubleshooting](#-troubleshooting)  🖼 [Screenshots](#-screenshots)
+🗺️ [How to use](#%EF%B8%8F-how-to-use)  🛠 [Installation](#-installation)  🐞 [Troubleshooting](#-troubleshooting)
 
 # ⏲️ Z2M Knob — Gesture Action Controller (Moes ZG-101ZD & similar AliExpress-sold knobs)
 Assign your actions to Zigbee2MQTT rotary-knob gestures in Home Assistant. Supports Command/Event modes and includes noise filtering for false “tail” events.
@@ -12,7 +12,7 @@ Assign your actions to Zigbee2MQTT rotary-knob gestures in Home Assistant. Suppo
 - Supports configuring automation mode and maximum concurrent runs
 - Debug output available via notifications or logs
 
-### Main concept of blueprint — assigning your actions to knob gestures. Other screenshots are bellow.
+**Main concept of blueprint — assigning your actions to knob gestures.**
 ![Knob gestures to your Actions](screenshots/z2m_moes_knobs_gestures_to_actions.png)
 
 
@@ -49,9 +49,16 @@ Your scripts stay small and focused on behavior, while the knob logic is configu
    - Open Zigbee2MQTT → Devices → choose your knob → copy its **Friendly name**.
    - Replace `your_knob_friendly_name` in blueprint UI with copied value. _e.g.: zigbee2mqtt/Bedroom_Knob._
    - 🥳 Now automation monitors events from your concrete knob.
-3. Assign your actions to gestures (what each gesture will do). Read "advanced usage part" for more details.
+3. Assign your actions to gestures (what each gesture will do). 
 
 ### 🚀 Advanced usage
+
+![Fine tuning](screenshots/z2m_moes_knobs_advanced_tuning.png]
+
+#### Noise filter window
+Problem is hext: If you did not use noise filter and rotate with hold, after releasing knob you will got false single or toggle event that is useless and can make unwanted action. 
+Noise filter window is amount of time in miliseconds, during which after knob rotate events will be ignored.
+500ms is good enough, but you can tune it manually. Please, [use debugger](#debugging) to test your events and check if filter window has good size for you.
 
 #### Debugging
 Use Debug mode to test behavior. Set Debug = `notification`. A new notification will appear in HA. 
@@ -67,6 +74,9 @@ This helps you:
 If your knob produces different event values —  adjust them in the **gesture binding table** in the blueprint inputs.
 
 If your knob uses a different operation-mode model — copy the debug data and send it to me, I will add support.
+
+#### Low level events to gestures
+If your knob has other events than in blueprint ([use debugger](#debugging) to test them), you can re-bind native knob events to gestures. Write your events on the right side (one event per line).
 
 #### Additional parameters for scripts
 If you are advanced user and use scripts as actions, you can add parameters from automation.
