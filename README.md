@@ -1,4 +1,4 @@
-[![Home Assistant Blueprint](https://img.shields.io/badge/Home%20Assistant-Blueprint-41BDF5)](https://www.home-assistant.io/)
+<img width="204" height="393" alt="image" src="https://github.com/user-attachments/assets/c1983b69-67ca-4528-8a1d-fd47022d97ac" />[![Home Assistant Blueprint](https://img.shields.io/badge/Home%20Assistant-Blueprint-41BDF5)](https://www.home-assistant.io/)
 [![HACS](https://img.shields.io/badge/HACS-Custom-informational)](https://hacs.xyz/)
 [![Zigbee2MQTT](https://img.shields.io/badge/Zigbee2MQTT-Docs-f39c12)](https://www.zigbee2mqtt.io/)
 [![Status: Stable](https://img.shields.io/badge/Status-Stable-brightgreen)](https://github.com/LanKing/z2m-knobs-gesture-controller/releases/latest)
@@ -178,8 +178,8 @@ After saving, trigger a gesture on your knob and check the result in the notific
 
 1. Add this repository to your HACS:
 - HACS → Integrations → ⋮ → Custom repositories
-- URL: `https://github.com/LanKing/z2m-knobs-gesture-controller/`
-- Category: Blueprint
+- **URL:** `https://github.com/LanKing/z2m-knobs-gesture-controller/`
+- **Category:** Template
 - Add → Close
 2. Install blueprint:
 - HACS → Blueprints
