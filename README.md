@@ -169,7 +169,11 @@ After saving, trigger a gesture on your knob and check the result in the notific
 
 ## 🛠 Installation
 
-### ✨ Easiest way — via HACS
+### 👨‍💻 Manual way
+1. Copy [blueprint](/blueprints/automation/lanking/z2m-knobs-gesture-controller.yaml) to **[ Your Home Assistant ]**/`config/blueprints/automation/lanking/z2m-knobs-gesture-controller.yaml`
+2. Settings → Automations & Scenes → ⋮ (top-right) → Reload Automations
+
+### ✨ Via HACS
 > ℹ️ [What is HACS?](#-appendix-1--what-is-hacs)
 
 1. Add this repository to your HACS:
@@ -182,9 +186,7 @@ After saving, trigger a gesture on your knob and check the result in the notific
 - Search for: `Z2M Knob — Gesture Action Controller`
 - Download
   
-### 👨‍💻 Manual way
-1. Copy [blueprint](/blueprints/automation/lanking/z2m-knobs-gesture-controller.yaml) to **[ Your Home Assistant ]**/`config/blueprints/automation/lanking/z2m-knobs-gesture-controller.yaml`
-2. Settings → Automations & Scenes → ⋮ (top-right) → Reload Automations
+
 
 
 
