@@ -161,7 +161,7 @@ After saving, trigger a gesture on your knob and check the result in the notific
 ## 🤯 Troubleshooting
 - No actions trigger → Check correct MQTT topic. Enable Debug mode and [check notifications/logs](#-debugging)
 - Unexpected gestures after rotation → [increase noise filter window (ms)](#-debugging)
-- Sensor unavailable → create the MQTT sensor and restart HA
+- Sensor unavailable → wait until automation will re-create it. If problem is presistent, please write me.
 - Knob uses different payload values → [adjust the binding table in inputs](#-advanced-usage)
 - Knob uses a different operation-mode model → copy the debug data and send it to me, I will add support 🤝
 
@@ -173,18 +173,12 @@ After saving, trigger a gesture on your knob and check the result in the notific
 > ℹ️ [What is HACS?](#-appendix-1--what-is-hacs)
 
 1. Open HACS and search for: `Z2M Knob — Gesture Action Controller`
-3. Install it
-4. Restart Home Assistant (please make full restart, not only automations reload. A full restart is required because the package creates a noise-filter sensor in the configuration.)
+2. Install it
 
 ### 👨‍💻 Manual way
-1. Copy [those files](/CONFIG) to Home Assistant CONFIG directory
-2. Ensure packages are enabled in CONFIG/configuration.yaml  
-The following line (packages) is required. If it does not exist, add it:
-```yaml
-homeassistant:
-  packages: !include_dir_named packages
-```
-3. Restart Home Assistant (full restart is required to make noise-filter sensor work in HA)
+1. Copy [blueprint](/CONFIG) to Home Assistant CONFIG directory
+2. Settings → Automations & Scenes → ⋮ (top-right) → Reload Automations
+
 
 
 ## 📌 Compatibility
