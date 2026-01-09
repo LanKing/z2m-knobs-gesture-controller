@@ -1,5 +1,6 @@
 [![Home Assistant Blueprint](https://img.shields.io/badge/Home%20Assistant-Blueprint-41BDF5)](https://www.home-assistant.io/)
-[![HACS Default](https://img.shields.io/badge/HACS-Default-41BDF5)](https://hacs.xyz/)
+# [![HACS Default](https://img.shields.io/badge/HACS-Default-41BDF5)](https://hacs.xyz/)
+![HACS](https://img.shields.io/badge/HACS-Custom-informational)
 [![Zigbee2MQTT](https://img.shields.io/badge/Zigbee2MQTT-Docs-f39c12)](https://www.zigbee2mqtt.io/)
 [![Status: Stable](https://img.shields.io/badge/Status-Stable-brightgreen)](https://github.com/LanKing/z2m-knobs-gesture-controller/releases/latest)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellowgreen)](LICENSE)
@@ -172,9 +173,16 @@ After saving, trigger a gesture on your knob and check the result in the notific
 ### ✨ Easiest way — via HACS
 > ℹ️ [What is HACS?](#-appendix-1--what-is-hacs)
 
-1. Open HACS and search for: `Z2M Knob — Gesture Action Controller`
-2. Install it
-
+1. Add this repository to your HACS:
+- HACS → Integrations → ⋮ → Custom repositories
+- URL: `https://github.com/LanKing/z2m-knobs-gesture-controller/`
+- Category: Blueprint
+- Add → Close
+2. Install blueprint:
+- HACS → Blueprints
+- Search for: `Z2M Knob — Gesture Action Controller`
+- Download
+  
 ### 👨‍💻 Manual way
 1. Copy [blueprint](/CONFIG) to Home Assistant CONFIG directory
 2. Settings → Automations & Scenes → ⋮ (top-right) → Reload Automations
