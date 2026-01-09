@@ -1,5 +1,5 @@
 [![Home Assistant Blueprint](https://img.shields.io/badge/Home%20Assistant-Blueprint-41BDF5)](https://www.home-assistant.io/)
-![HACS](https://img.shields.io/badge/HACS-Custom-informational)
+[![HACS](https://img.shields.io/badge/HACS-Custom-informational)](https://hacs.xyz/)
 [![Zigbee2MQTT](https://img.shields.io/badge/Zigbee2MQTT-Docs-f39c12)](https://www.zigbee2mqtt.io/)
 [![Status: Stable](https://img.shields.io/badge/Status-Stable-brightgreen)](https://github.com/LanKing/z2m-knobs-gesture-controller/releases/latest)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellowgreen)](LICENSE)
