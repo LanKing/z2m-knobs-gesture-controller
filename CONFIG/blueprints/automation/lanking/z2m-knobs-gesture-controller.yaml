@@ -240,7 +240,7 @@ variables:
 
   # Debug inputs
   _debug_mode: !input debug_mode
-  _debug_notification_id: "lanking_rotating_knob_actions"
+  _debug_notification_id: "z2m_knobs_gesture_controller_debug"
 
   # Bind inputs to array (values are strings LF separated)
   bind_single: !input bind_single
@@ -331,8 +331,15 @@ variables:
 
   # Last states and noise filter window
   _noise_filter_window_ms: !input noise_filter_window_ms
-  _state_entity: "sensor.lanking_z2m_device_states"
-  _state_topic: "ha/lanking/z2m_device_states"
+  _state_id: "z2m_device_states"
+  _state_name: "LanKing Z2M Device States"
+  _state_domain: "lanking"
+
+  _state_unique_id: "{{ _state_domain }}_{{ _state_id }}"
+  _state_entity: "sensor.{{_state_unique_id}}"
+  _state_topic: "ha/{{ _state_domain }}/{{ _state_id }}"
+  _state_config_topic: "homeassistant/sensor/{{ _state_domain }}_{{ _state_id }}/config"
+
   _state_raw: "{{ states(_state_entity) }}"
   _state_map: >-
     {% set s = _state_raw %}
@@ -377,8 +384,8 @@ variables:
 
 
     🔇 Noise filter window:{% if _state_raw in ['unknown','unavailable'] %}  
-    ⚠️ WARNING: Sensor {{ _state_entity }} not found!
-    The noise filter is probably DISABLED. In that case, add an MQTT sensor to configuration.yaml.
+    ⚠️ WARNING: Sensor {{ _state_unique_id }} not found!
+    The noise filter is probably DISABLED. Automation will try to re-create it.
     {% else %}
     Inside filter window: {{_in_filter_window}}
     Window duration: {{ _noise_filter_window_ms }} ms
@@ -390,6 +397,24 @@ variables:
     Topic: {{ topic }}
 
 action:
+  # Add sensor if it does not exists
+  - if:
+      - condition: template
+        value_template: "{{ _state_raw in ['unknown','unavailable'] }}"
+    then:
+      - service: mqtt.publish
+        data:
+          topic: "{{ _state_config_topic }}"
+          retain: true
+          payload: >
+            {
+              "name": "{{_state_name}}",
+              "unique_id": "{{ _state_unique_id }}",
+              "state_topic": "{{ _state_topic }}"
+            }
+      # - delay:
+      #     seconds: 2
+
   # Send debug message
   - choose:
       - conditions:
