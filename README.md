@@ -183,7 +183,7 @@ After saving, trigger a gesture on your knob and check the result in the notific
 - Download
   
 ### 👨‍💻 Manual way
-1. Copy [blueprint](/CONFIG) to Home Assistant CONFIG directory
+1. Copy [blueprint](/blueprints/automation/lanking/z2m-knobs-gesture-controller.yaml) to [ Your Home Assistant ]/`config/blueprints/automation/lanking/z2m-knobs-gesture-controller.yaml`
 2. Settings → Automations & Scenes → ⋮ (top-right) → Reload Automations
 
 
