@@ -168,8 +168,8 @@ After saving, trigger a gesture on your knob and check the result in the notific
 
 ## 🛠 Installation
 ### ➕ Import
-This variant can not work if you have unstandard HA url. Try please:
 [Import blueprint via url](https://my.home-assistant.io/redirect/blueprint_import/?blueprint_url=https%3A%2F%2Fgithub.com%2FLanKing%2Fz2m-knobs-gesture-controller%2Fblob%2Fmain%2Fblueprints%2Fautomation%2Flanking%2Fz2m-knobs-gesture-controller.yaml)
+> ⚠️ If you have unstandard HA url, please change it on the first page:
 
 ### 🔽 Manual way
 1. Copy [blueprint](/blueprints/automation/lanking/z2m-knobs-gesture-controller.yaml) to **[ Your Home Assistant ]**/`config/blueprints/automation/lanking/z2m-knobs-gesture-controller.yaml`
