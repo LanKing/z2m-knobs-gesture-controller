@@ -1,5 +1,4 @@
 [![Home Assistant Blueprint](https://img.shields.io/badge/Home%20Assistant-Blueprint-41BDF5)](https://www.home-assistant.io/)
-[![HACS](https://img.shields.io/badge/HACS-Custom-informational)](https://hacs.xyz/)
 [![Zigbee2MQTT](https://img.shields.io/badge/Zigbee2MQTT-Docs-f39c12)](https://www.zigbee2mqtt.io/)
 [![Status: Stable](https://img.shields.io/badge/Status-Stable-brightgreen)](https://github.com/LanKing/z2m-knobs-gesture-controller/releases/latest)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellowgreen)](LICENSE)
@@ -168,27 +167,8 @@ After saving, trigger a gesture on your knob and check the result in the notific
 ---
 
 ## 🛠 Installation
-
-### 👨‍💻 Manual way
 1. Copy [blueprint](/blueprints/automation/lanking/z2m-knobs-gesture-controller.yaml) to **[ Your Home Assistant ]**/`config/blueprints/automation/lanking/z2m-knobs-gesture-controller.yaml`
 2. Settings → Automations & Scenes → ⋮ (top-right) → Reload Automations
-
-### ✨ Via HACS
-> ℹ️ [What is HACS?](#-appendix-1--what-is-hacs)
-
-1. Add this repository to your HACS:
-- HACS → Integrations → ⋮ → Custom repositories
-- **URL:** `https://github.com/LanKing/z2m-knobs-gesture-controller/`
-- **Category:** Template
-- Add → Close
-2. Install blueprint:
-- HACS → Blueprints
-- Search for: `Z2M Knob — Gesture Action Controller`
-- Download
-  
-
-
-
 
 ## 📌 Compatibility
 Tested primarily with:
@@ -200,19 +180,3 @@ Most similar Z2M knobs should work as long as their events can be mapped to gest
 
 ## 📄 License
 MIT — contributions welcome.
-
----
-
-## 🛍 Appendix 1 — What is HACS?
-
-HACS (Home Assistant Community Store) is a community-driven extension system for Home Assistant.
-It allows you to install third-party blueprints, integrations, dashboards, and custom components directly from GitHub — with update notifications and version management.
-
-### How to install HACS
-
-> During the first-time setup, HACS will ask you to sign in to GitHub and authorize access.  
-> You need a GitHub account for this (create one if needed: [https://github.com/signup](https://github.com/signup)).  
-> 🧘‍♂️ The authorization is read-only — HACS can only download public repositories and cannot modify your GitHub account or data.  
-
-👉 [Follow the official HACS setup instruction](https://hacs.xyz/docs/use/#getting-started-with-hacs)
-
