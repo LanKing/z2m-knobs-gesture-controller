@@ -88,9 +88,23 @@ If your knob uses a different operation-mode model — copy the debug data and s
 #### 🔗 Low level events to gestures
 If your knob has other events than in blueprint ([use debugger](#-debugging) to test them), you can re-bind native knob events to gestures. Enter your event names in the right-side field (one per line).
 
-#### 👨‍🏫 Additional parameters for scripts
+#### 🧩 Hook script
+You can select one script that will be triggered on each gesture and will receive all variables:
 
-If you are an advanced user and use scripts as actions, you can pass additional parameters from the automation to your script.
+- gesture: single | double | hold | hold_release | rotate_left | rotate_right | hold_rotate_left | hold_rotate_right | mode_change | unknown
+- step_size: action_step_size from payload
+- rate: action_rate from payload
+- operation_mode: operation_mode from payload
+- native_event: action from payload
+- topic: MQTT topic of the message
+- knob_id: Id of your knob (without "zigbee2mqtt/")
+- raw: raw MQTT payload (string)
+- payload_json: parsed MQTT payload (dict)
+
+
+#### 👨‍🏫 Additional parameters for scripts as actions
+
+You can pass additional parameters from the automation to your script (if action is script) but it is a bit tricky.
 
 Below is an example of how to use this. First, create a script.
 
