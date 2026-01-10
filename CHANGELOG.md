@@ -2,7 +2,7 @@
 
 All notable changes to this project will be documented in this file.
 
-## 1.0.1 - Additions
+## 1.0.1 - Hook script
 - Added selector for hook script: This script will start on each gesture and receive all availible variables
 - Added knob_id variable
 
