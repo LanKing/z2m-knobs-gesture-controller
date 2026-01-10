@@ -13,6 +13,15 @@ blueprint:
       selector:
         text: {}
 
+    hook_script:
+      name: "🧩 Hook script (optional)"
+      description: |
+        If selected, this script will be called on every MQTT message BEFORE gesture actions. It receives ALL helper variables, see details below 👇
+      default: ""
+      selector:
+        entity:
+          domain: script
+
     cmd_single_action:
       name: "1️⃣ Single click (command mode)"
       description: |
@@ -25,7 +34,8 @@ blueprint:
         - native_event: action from payload
         - topic: MQTT topic of the message
         - raw: raw MQTT payload (string)
-        - payload_json: parsed MQTT payload (dict)
+        - payload_json: parsed MQTT payload (dict)        
+        - knob_id: Id of your knob (without "zigbee2mqtt/")      
 
         How to use: https://github.com/LanKing/z2m-knobs-gesture-controller/#%E2%80%8D-additional-parameters-for-scripts
       default: []
@@ -206,7 +216,7 @@ blueprint:
 
 mode: !input automation_mode
 max: !input automation_max
-max_exceeded: silent
+max_exceeded: warning
 
 trigger:
   - platform: mqtt
@@ -214,6 +224,9 @@ trigger:
 
 variables:
   topic: "{{ trigger.topic | default('') }}"
+
+  # Action for hook script
+  _hook_script: !input hook_script
 
   # Actions for gestures inputs
   _cmd_single_action: !input cmd_single_action
@@ -348,8 +361,8 @@ variables:
     {% else %}
       {{ s | from_json }}
     {% endif %}
-  _knob_id: "{{ topic | replace('zigbee2mqtt/','') }}"
-  _last: "{{ _state_map.get(_knob_id, dict()) }}"
+  knob_id: "{{ topic | replace('zigbee2mqtt/','') }}"
+  _last: "{{ _state_map.get(knob_id, dict()) }}"
   _last_ts: "{{ _last.get('ts', 0) | float(0) }}"
   _last_is_holded: "{{ _last.get('is_holded', false) }}"
   _ms_since_last_event: "{{ ((now().timestamp() - _last_ts) * 1000) | int }}"
@@ -455,13 +468,32 @@ action:
                 {{ dict(ts=_now_ts, is_holded=_is_holded) }}
                 # direction=_direction,
               _merged_state: >-
-                {{ _state_map | combine({_knob_id: _new_entry}) | to_json }}
+                {{ _state_map | combine({knob_id: _new_entry}) | to_json }}
           - service: mqtt.publish
             data:
               topic: "{{ _state_topic }}"
               payload: "{{ _merged_state }}"
               retain: true
     default: []
+
+    # Hook script (optional) — runs BEFORE gesture actions
+  - if:
+      - condition: template
+        value_template: "{{ _hook_script is string and (_hook_script | trim) != '' }}"
+    then:
+      - action: script.turn_on
+        data:
+          entity_id: "{{ _hook_script }}"
+          variables:
+            topic: "{{ topic }}"
+            raw: "{{ raw }}"
+            payload_json: "{{ payload_json }}"
+            native_event: "{{ native_event }}"
+            operation_mode: "{{ operation_mode }}"
+            step_size: "{{ step_size }}"
+            rate: "{{ rate }}"
+            gesture: "{{ gesture }}"
+            knob_id: "{{ knob_id }}"
 
   # Gesture controller
   - choose:
