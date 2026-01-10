@@ -2,9 +2,12 @@
 
 All notable changes to this project will be documented in this file.
 
+## 1.0.1 - Additions
+- Added selector for hook script: This script will start on each gesture and receive all availible variables
+- Added knob_id variable
+
 ## 1.0.0 — First public release
 
-### Added
 - Home Assistant blueprint for Zigbee2MQTT rotary knobs (Moes ZG-101ZD & similar)
 - Gesture mapping engine:
   - single / double click
@@ -24,3 +27,4 @@ All notable changes to this project will be documented in this file.
   - usage guide with screenshots
   - troubleshooting & debugging section
   - example: passing parameters to scripts
+
